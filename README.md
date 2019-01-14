@@ -1,9 +1,7 @@
-# SoloGAN
+## SoloGAN
 * Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network *
-====
 
-# 黄世华
-Example Usage
+# Example Usage
 Testing
 First, download the pretrained models and put them in ./checkpoints/
 
