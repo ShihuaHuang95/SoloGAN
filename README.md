@@ -1,5 +1,5 @@
 ## SoloGAN
-* Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network *
+* Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network
 
 # Example Usage
 Testing
