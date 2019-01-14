@@ -13,6 +13,7 @@ python ./test.py --name edges_shoes&handbags --d_num 2
 Then the results are stored in ./checkpoints/edges_shoes&handbags/edges_shoes&handbags_results directory. By default, it produce 10 random translation outputs.
 
 Training
+-
 1. Download the dataset you want to use and move to ./datasets. For example, you can use the horse2zebra dataset provided by CycleGAN.
 2. Start training:
 	python ./train.py --name horse2zebra --d_num 2
