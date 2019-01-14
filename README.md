@@ -3,7 +3,7 @@
 
 # Example Usage
 Testing
-=
+-
 First, download the pretrained models and put them in ./checkpoints/
 
 Runing the following command to translate edges to shoes&handbags
