@@ -1,25 +1,29 @@
 # SoloGAN
-[Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network](https://arxiv.org/pdf/1901.03353.pdf)
+[Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network][0]
+
+Our model architecture is defined as depicted bellow, please refer to the [paper][0] for more details:
+<img src='images/Whole_Network_Structure_1.jpg'  width='900px' />
 
 ### Results
 
-Cat ↔ Dog:
-<p align="center">
-<img src='images/cat.jpg'  width='18%' /><img src='images/cat2dog.gif'   width='18%' />
-<img src='images/dog.jpg'  width='18%'/><img src='images/dog2cat.gif'   width='18%'/>
-</p>
-Label ↔ Facade:
-<p align="center">
-<img src='images/label.jpg'  width='18%' /><img src='images/label2facade.gif'   width='18%' />
-<img src='images/facade.jpg'  width='18%'/><img src='images/facade2label.gif'   width='18%'/>
-</p>
-Edge ↔ Shoes:
-<p align="center">
-<img src='images/edge.jpg'  width='18%' /><img src='images/edge2shoe.gif'   width='18%' />
-<img src='images/shoe.jpg'  width='18%'/><img src='images/shoe2edge.gif'   width='18%'/>
-</p>
+Edges ↔ Shoes&handbags:
+
+Horse ↔ Zebra:
+
+Cat ↔ Dog ↔ Tiger:
+
+Leopard ↔ Lion ↔ Tiger:
+
+Photos ↔ Vangogh ↔ Monet ↔ Cezanne:
+
+<img src='images/four_domains_results.jpg'  width='900px' />
 
 ## Usage Guidance
+
+### Dependencies
+1. python 3.x
+2. pytorch 4.0+
+
 ### Testing
 
 * Downloading the pretrained models and put them in ./checkpoints/ from
@@ -27,7 +31,9 @@ Edge ↔ Shoes:
 [Baidu Yun](https://pan.baidu.com/s/1HixWmTob0uU0TjwZAWqKFg)
 
 * Runing the following command to translate edges to shoes&handbags:
-> python ./test.py --name edges_shoes&handbags --d_num 2
+```bash
+python ./test.py --name edges_shoes&handbags --d_num 2
+```
 
 Then the translated samples are stored in ./checkpoints/edges_shoes&handbags/edges_shoes&handbags_results directory.
 By default, it produce 5 random translation outputs.
@@ -35,8 +41,21 @@ By default, it produce 5 random translation outputs.
 ### Training
 
 * Download the dataset you want to use and move to ./datasets. For example, you can use the horse2zebra dataset provided by [CycleGAN][1].
+Please make sure that you have the following directory tree structure in your repository
+```
+├── datasets
+│   └── horse2zebra
+│       ├── trainA
+│       ├── testA
+│       ├── trainB
+│       ├── testB
+```
+The Animals With Attributes (AWA) dataset can be downloaded from [hear]()
 * Start training with the following command:
-> python ./train.py --name horse2zebra --d_num 2
+
+```bash
+python ./train.py --name horse2zebra --d_num 2
+```
 
 Intermediate image outputs and model binary files are stored in ./checkpoints/horse2zebra/web
 
@@ -59,5 +78,6 @@ The code used in this research is based on [SingleGAN](https://github.com/Xiaomi
 
 Feeling free to reach me if there is any questions (huangsh6@mail.sustc.edu.cn)
 
-
+[0]: https://arxiv.org/pdf/1901.03353.pdf	"paper"
 [1]: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix "CycleGAN"
+[2]: 	"AWA2"
