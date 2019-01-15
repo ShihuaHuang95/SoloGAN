@@ -50,7 +50,7 @@ Please make sure that you have the following directory tree structure in your re
 │       ├── trainB
 │       ├── testB
 ```
-The Animals With Attributes (AWA) dataset can be downloaded from [hear]()
+The Animals With Attributes (AWA) dataset can be downloaded from [hear][2].
 * Start training with the following command:
 
 ```bash
@@ -76,8 +76,8 @@ The code used in this research is based on [SingleGAN](https://github.com/Xiaomi
 
 ### Concat
 
-Feeling free to reach me if there is any questions (huangsh6@mail.sustc.edu.cn)
+Feeling free to reach me if there is any questions <huangsh6@mail.sustc.edu.cn>
 
 [0]: https://arxiv.org/pdf/1901.03353.pdf	"paper"
 [1]: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix "CycleGAN"
-[2]: 	"AWA2"
+[2]: https://cvml.ist.ac.at/AwA2/AwA2-data.zip "AwA2"
