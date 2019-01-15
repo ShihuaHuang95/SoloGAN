@@ -24,7 +24,7 @@ Edge ↔ Shoes:
 
 * Downloading the pretrained models and put them in ./checkpoints/ from
 [Google Drive](https://drive.google.com/drive/u/1/folders/1ipVSrr-0dAJKqHbqFw7Y8sqfF3GXq5XN) or
-[Baidu Yun](https://pan.baidu.com/s/1r-urWNe0K7C71Z8DbrOepw)
+[Baidu Yun](https://pan.baidu.com/s/1HixWmTob0uU0TjwZAWqKFg)
 
 * Runing the following command to translate edges to shoes&handbags:
 > python ./test.py --name edges_shoes&handbags --d_num 2
