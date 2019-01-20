@@ -1,26 +1,8 @@
 # SoloGAN
-[Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network][0]
+Multimodal Image-to-Image Translation among Multiple Domains Using a Single Generative Adversarial Network
 
-Our model architecture is defined as depicted bellow, please refer to [the paper][0] for more details:
+Our model architecture is defined as depicted bellow, please refer to the paper for more details:
 <img src='images/Whole_Network_Structure.jpg'  width='900px' />
-
-### Results
-
-Edges ↔ Shoes&handbags:
-<img src='images/edges2shoes&handbags.jpg'  width='900px' />
-
-Horse ↔ Zebra:
-<img src='images/horse2zebra.jpg'  width='900px' />
-
-Cat ↔ Dog ↔ Tiger:
-<img src='images/cat2dog2tiger.jpg'  width='900px' />
-
-Leopard ↔ Lion ↔ Tiger:
-<img src='images/leopard2lion2tiger.jpg'  width='900px' />
-
-Photos ↔ Vangogh ↔ Monet ↔ Cezanne:
-
-<img src='images/photo2Vangogh2Monet2Cezanne.jpg'  width='900px' />
 
 ## Usage Guidance
 
@@ -30,11 +12,7 @@ Photos ↔ Vangogh ↔ Monet ↔ Cezanne:
 
 ### Testing
 
-* Downloading the pretrained models and put them in ./checkpoints/ from
-[Google Drive](https://drive.google.com/drive/u/1/folders/1ipVSrr-0dAJKqHbqFw7Y8sqfF3GXq5XN) or
-[Baidu Yun](https://pan.baidu.com/s/1HixWmTob0uU0TjwZAWqKFg)
-
-* Runing the following command to translate edges to shoes&handbags:
+* Runing the following command to translate edges to shoes&handbags (the pretrained models are stored in ./checkpoints/edges_shoes&handbags directory):
 ```bash
 python ./test.py --name edges_shoes&handbags --d_num 2
 ```
@@ -63,25 +41,31 @@ python ./train.py --name horse2zebra --d_num 2
 
 Intermediate image outputs and model binary files are stored in ./checkpoints/horse2zebra/web
 
-#### bibtex
-If this work help to easy your research, please cite the corresponding paper :
-```
-@inproceedings{huangsologan,
-	title={[Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network},
-	author={Shihua, Huang and Cheng, He and Yuli, Zhang and Ran Cheng},
-	booktitle={},
-	year={2019}
- }
- ```
+## Results
 
-### Acknowledgment
+### Edges ↔ Shoes&handbags:
+<img src='images/edges2shoes&handbags.jpg'  width='900px' />
 
-The code used in this research is based on [SingleGAN](https://github.com/Xiaoming-Yu/SingleGAN)
+### Horse ↔ Zebra:
+<img src='images/horse2zebra.jpg'  width='900px' />
 
-### Concat
+### Cat ↔ Dog ↔ Tiger:
+<img src='images/cat2dog2tiger.jpg'  width='900px' />
 
-Feeling free to reach me if there is any questions <huangsh6@mail.sustc.edu.cn>
+### Leopard ↔ Lion ↔ Tiger:
+<img src='images/leopard2lion2tiger.jpg'  width='900px' />
 
-[0]: https://arxiv.org/pdf/1901.03353.pdf	"paper"
+### Photos ↔ Vangogh ↔ Monet ↔ Cezanne:
+
+<img src='images/photo2Vangogh2Monet2Cezanne.jpg'  width='900px' />
+
+## bibtex
+If this work helps to easy your research, please cite this paper :
+
+## Acknowledgment
+
+The code used in this research is based on [SingleGAN](https://github.com/Xiaoming-Yu/SingleGAN) and [CycleGAN][1].
+
+[0]:
 [1]: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix "CycleGAN"
 [2]: https://cvml.ist.ac.at/AwA2/AwA2-data.zip "AwA2"
