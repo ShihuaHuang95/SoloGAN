@@ -1,22 +1,26 @@
 # SoloGAN
 [Unsupervised Multimodal Image Translation using a Single Generative Adversarial Network][0]
 
-Our model architecture is defined as depicted bellow, please refer to the [paper][0] for more details:
-<img src='images/Whole_Network_Structure_1.jpg'  width='900px' />
+Our model architecture is defined as depicted bellow, please refer to [the paper][0] for more details:
+<img src='images/Whole_Network_Structure.jpg'  width='900px' />
 
 ### Results
 
 Edges ↔ Shoes&handbags:
+<img src='images/edges2shoes&handbags.jpg'  width='900px' />
 
 Horse ↔ Zebra:
+<img src='images/horse2zebra.jpg'  width='900px' />
 
 Cat ↔ Dog ↔ Tiger:
+<img src='images/cat2dog2tiger.jpg'  width='900px' />
 
 Leopard ↔ Lion ↔ Tiger:
+<img src='images/leopard2lion2tiger.jpg'  width='900px' />
 
 Photos ↔ Vangogh ↔ Monet ↔ Cezanne:
 
-<img src='images/four_domains_results.jpg'  width='900px' />
+<img src='images/photo2Vangogh2Monet2Cezanne.jpg'  width='900px' />
 
 ## Usage Guidance
 
