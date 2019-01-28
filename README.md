@@ -66,6 +66,5 @@ If this work helps to easy your research, please cite this paper :
 
 The code used in this research is based on [SingleGAN](https://github.com/Xiaoming-Yu/SingleGAN) and [CycleGAN][1].
 
-[0]:
 [1]: https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix "CycleGAN"
 [2]: https://cvml.ist.ac.at/AwA2/AwA2-data.zip "AwA2"
