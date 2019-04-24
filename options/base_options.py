@@ -39,6 +39,7 @@ class BaseOptions():
         self.parser.add_argument('--c_gan_mode', type=str, default='lsgan', help='use dcgan or lsgan')
         self.parser.add_argument('--norm', type=str, default='instance', help='instance normalization or batch normalization')
         self.parser.add_argument('--init_type', type=str, default='xavier', help='network initialization [normal|xavier|kaiming|orthogonal]')
+        self.parser.add_argument('--myname', type=str, default='ShihuaHuang', help='The name of developer') 
         self.initialized = True
 
     def parse(self):
