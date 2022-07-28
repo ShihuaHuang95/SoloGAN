@@ -60,6 +60,7 @@ Intermediate image outputs and model binary files are stored in ./checkpoints/ho
 
 ## bibtex
 If this work helps to easy your research, please cite this paper :
+```
 @article{huang2022multimodal,
   title={Multimodal image-to-image translation via a single generative adversarial network},
   author={Huang, Shihua and He, Cheng and Cheng, Ran},
@@ -67,6 +68,8 @@ If this work helps to easy your research, please cite this paper :
   year={2022},
   publisher={IEEE}
 }
+```
+
 
 ## Acknowledgment
 
