@@ -5,7 +5,9 @@ from util.visualizer import Visualizer
 from models.solver import SoloGAN
 
 opt = TrainOptions().parse()
-opt.dataroot = '{}/{}'.format(opt.dataroot, opt.name)
+dataset_name = opt.name
+opt.dataroot = '{}/{}'.format(opt.dataroot, dataset_name)
+
 data_loader = CreateDataLoader(opt)
 dataset_size = len(data_loader) * opt.batchSize
 visualizer = Visualizer(opt)
@@ -13,8 +15,6 @@ visualizer = Visualizer(opt)
 model = SoloGAN()
 model.initialize(opt)
 
-import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def train():
     total_steps = 0
@@ -22,6 +22,7 @@ def train():
     G_lr = opt.G_lr
     total_epoch = opt.niter + opt.niter_decay + 1
     for epoch in range(1, total_epoch):
+        epoch_start_time = time.time()
         save_result = True
         for i, data in enumerate(data_loader):
             iter_start_time = time.time()
@@ -49,10 +50,8 @@ def train():
             D_lr -= opt.D_lr / opt.niter_decay
             G_lr -= opt.G_lr / opt.niter_decay
             model.update_lr(D_lr, G_lr)
-
-    if epoch == opt.niter + opt.niter_decay:
-        model.save('latest')
-        model.save(epoch)
+    model.save('latest')
+    model.save(epoch)
 
 
 if __name__ == '__main__':

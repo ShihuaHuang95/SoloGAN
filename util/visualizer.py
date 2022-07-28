@@ -11,11 +11,17 @@ import math
 # save image to the disk
 def save_images(webpage, images_list, names_list, image_path, title=None, width=256):
     image_dir = webpage.get_image_dir()
-    short_path = ntpath.basename(image_path)
     # name = os.path.splitext(short_path)[0]
-    name = short_path
+    if image_path == None:
+        name = None
+        title = ntpath.basename(title)
+    else:
+        short_path = ntpath.basename(image_path)
+        name = short_path
+        
     if not title:
         title = name
+        
     webpage.add_header(title)
     ims = []
     txts = []
@@ -23,7 +29,11 @@ def save_images(webpage, images_list, names_list, image_path, title=None, width=
     
     for names, images in zip(names_list, images_list):
         for label, image_numpy in zip(names, images):
-            image_name = '%s_%s.jpg' % (name, label)
+            if name == None:
+                image_name = '%s.jpg' % (label)
+            else:
+                image_name = '%s_%s.jpg' % (name, label)
+                
             save_path = os.path.join(image_dir, image_name)
             util.save_image(image_numpy, save_path)
 

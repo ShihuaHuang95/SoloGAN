@@ -1,5 +1,4 @@
-# SoloGAN
-Multimodal Image-to-Image Translation among Multiple Domains Using a Single Generative Adversarial Network
+# Multimodal image-to-image translation via a single generative adversarial network
 
 Our model architecture is defined as depicted bellow, please refer to the paper for more details:
 <img src='images/Whole_Network_Structure.jpg'  width='900px' />
@@ -61,6 +60,13 @@ Intermediate image outputs and model binary files are stored in ./checkpoints/ho
 
 ## bibtex
 If this work helps to easy your research, please cite this paper :
+@article{huang2022multimodal,
+  title={Multimodal image-to-image translation via a single generative adversarial network},
+  author={Huang, Shihua and He, Cheng and Cheng, Ran},
+  journal={IEEE Transactions on Artificial Intelligence},
+  year={2022},
+  publisher={IEEE}
+}
 
 ## Acknowledgment
 
